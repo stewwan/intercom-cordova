@@ -123,6 +123,8 @@ public class IntercomBridge extends CordovaPlugin {
                     registration = registration.withUserId(userId);
                 }
                 Intercom.client().registerIdentifiedUser(registration);
+                Intercom.client().setLauncherVisibility(Intercom.GONE);
+
                 callbackContext.success();
             }
         },
